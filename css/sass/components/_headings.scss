@@ -1,0 +1,22 @@
+.head-with-after{
+    position: relative;
+    text-align: center;
+    h2{
+        background-color: $alt_color;
+        width: 400px;
+        padding: 10px;
+        margin: auto;
+        color: white;
+        border-radius: 25px;
+    }
+    &::after{
+        position: absolute;
+        content: '';
+        width: 100%;
+        left: 0;
+        top: 50%;
+        height: 1.5px;
+        background-color: rgb(170, 167, 167);
+        z-index: -1;        
+    }
+}

@@ -1,0 +1,85 @@
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10px;
+    @media screen and(max-width:767px) {
+        flex-direction: column;
+    }
+}
+.bar_container{
+    padding: 6px 10px;
+    background-color: #eee;
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    cursor: pointer;
+    color: $alt_color;
+    font-size: 22px;
+    display: none;
+    @media screen and(max-width:767px) {
+        display: inline-block;
+    }
+}
+
+header a{
+    color: white;
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 3px 3px 4px rgb(185, 183, 183);
+    background-color: white;
+    z-index: 4;
+}
+
+.logo{
+    width: 27%;
+    @media screen and(max-width:767px) {
+        width: 50%;
+        text-align: center;
+        margin: 10px auto;
+    }
+}
+.logo p{
+    margin-top: 5px;
+}
+nav {
+    width: 73%;
+    @media screen and(max-width:767px) {
+        width: 100%;
+    }
+    text-align: center;
+}
+nav ul{
+    background-color: $alt_color;
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    color: white;
+    align-items: center;
+    border-radius: 15px;    
+    @media screen and(max-width:767px) {
+        display: block;
+        height: 0px;
+        overflow: hidden;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 0;
+        a:hover::after{
+            width: 15%;
+        }
+    }
+    &.show{
+        height: 160px;
+    }
+}
+ul li{
+    margin: 0 5px;
+    background-color: $alt_color;
+    @media screen and(max-width:767px) {
+        margin: 5px;
+    }
+}
+

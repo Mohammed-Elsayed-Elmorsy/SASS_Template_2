@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.container{
+    margin: auto;
+    @include smallmedia{
+        width: 100%
+    };
+    @include medium_media{
+        width:80%
+    };
+   
+    @include largemedia{
+        width: 70%
+    };
+}

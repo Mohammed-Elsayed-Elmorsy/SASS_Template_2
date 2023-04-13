@@ -1,0 +1,48 @@
+@mixin smallmedia {
+    @media (max-width:767px){
+        @content
+    }
+};
+
+@mixin medium_media {
+    @media (min-width:768px) and(max-width:991px) {
+        @content
+    }
+};
+
+@mixin largemedia {
+    @media screen and (min-width:992px) {
+        @content
+    }
+}
+
+;
+
+@mixin overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width:0%;
+    height: 100%;
+    transition: 0.3s;
+    background-color: rgba(0,0,0,0.5);
+}
+
+@mixin autoprefixer($property,$value,$prefixes ) {
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property}:$value;
+    }
+    $property:$value
+}
+
+@mixin keyFRAMES ($name){
+    @-moz-keyframes #{$name}{
+        @content
+    };
+    @-webkit-keyframes #{$name}{
+        @content
+    };
+    @keyframes #{$name}{
+        @content
+    }
+}

@@ -1,0 +1,37 @@
+body{
+    font-family: Tahoma;
+}
+
+img{
+    width: 100%;
+}
+    a{
+        text-decoration: none;
+        display: block;
+        padding: 8px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            height: 1px;
+            background-color: white;
+            width: 0%;
+            left: 50%;
+            transform: translate(-50%);
+            transition: 0.3s;
+        }
+        &:hover::after{
+            width: 70%;
+        }
+    }
+
+
+ul{
+    list-style: none;
+}
+hr{
+    height: 7px;
+    background-color: #eee;
+    display: block;
+}
